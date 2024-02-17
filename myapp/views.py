@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic.edit import CreateView
+from .models import Post
 
-def hello_world (request):
-    return HttpResponse("Hello world")
 
+
+
+class BlogCreateView(CreateView):
+    model=Post
+    template_name='Createpost.html'
+    fields=["title","author","body"]

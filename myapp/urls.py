@@ -1,7 +1,7 @@
-from .views import hello_world
 from django.urls import path
+from .views import BlogCreateView
 
 urlpatterns = [
-    path("", hello_world, name='helloworld'),
+    path("post/new",BlogCreateView.as_view(),name="post_new"),
 ]
 

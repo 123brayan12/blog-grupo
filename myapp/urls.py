@@ -1,7 +1,8 @@
-from .views import hello_world
+from .views import hello_world, ReadPageView
 from django.urls import path
 
 urlpatterns = [
-    path("", hello_world, name='helloworld'),
+    path("", ReadPageView.as_view(), name='ReadPageMain'),
+    
 ]
 

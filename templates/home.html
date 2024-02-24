@@ -18,7 +18,11 @@
 
     {% for post in post_list %} {% comment %} nombre por defecto {% endcomment %}
         <a href="{%  url 'post_detail' post.pk  %}">{{post.title}}</a>
+        <br>
     {% endfor %}
+
+    <br>
+    <a href="{% url 'post_new' %}">Create New</a>
 
 </body>
 

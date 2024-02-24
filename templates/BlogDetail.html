@@ -16,12 +16,17 @@
 
    <h4> {{ post.title }} </h4>
 
-   <textarea name="to_edit" cols="30" rows="10" placeholder="Fill this area"></textarea>
+<h4>Made by {{ post.author}}</h4>
 
-   <div class="send_section">
+<h3>content ==></h3>
 
-    <button class="Sending" value="Save">
-        Save
+<p>
+    {{post.body}}
+</p>
+   <div class="Details_section">
+
+    <button class="Go_to_edit" value="Redirect">
+        Edit
     </button>
 
     <a href="/"><button class="Exit">

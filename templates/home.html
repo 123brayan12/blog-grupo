@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_main.css' %}">
+    <title>Read</title>
+</head>
+<body>
+
+    <h1>This is the DetailView File</h1>
+
+
+    {% for post in post_list %} {% comment %} nombre por defecto {% endcomment %}
+        <a href="{%  url 'post_detail' post.pk  %}">{{post.title}}</a>
+        <br>
+    {% endfor %}
+
+    <br>
+    <a href="{% url 'post_new' %}">Create New</a>
+
+</body>
+
+</html>
+
+{% endblock content %}

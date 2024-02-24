@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_main.css' %}">
+    <title>Read</title>
+</head>
+<body>
+    
+    <h2>Edit Page</h2>
+
+   <h4> {{ post.title }} </h4>
+
+<h4>Made by {{ post.author}}</h4>
+
+<h3>content ==></h3>
+
+<p>
+    {{post.body}}
+</p>
+   <div class="Details_section">
+
+    <button class="Go_to_edit" value="Redirect">
+        Edit
+    </button>
+
+    <a href="/"><button class="Exit">
+        Go back
+    </button></a>
+   </div>
+
+</body>
+
+</html>
+
+{% endblock content %}

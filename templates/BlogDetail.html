@@ -11,9 +11,27 @@
     <title>Read</title>
 </head>
 <body>
+    
+    <h2>Edit Page</h2>
 
-    <h1>This is the Read File</h1>
+   <h4> {{ post.title }} </h4>
+
+   <textarea name="to_edit" cols="30" rows="10" placeholder="Fill this area"></textarea>
+
+   <div class="send_section">
+
+    <button class="Sending">
+        Send
+    </button>
+
+    <a href="{% url 'MainSite' %}"><button class="Exit">
+        Go back
+        
+    </button></a>
+   </div>
 
 </body>
+
 </html>
+
 {% endblock content %}

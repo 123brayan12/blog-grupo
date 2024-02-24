@@ -9,10 +9,10 @@ from django.views.generic import TemplateView, ListView, DetailView
 def hello_world (request):
     return HttpResponse("Hello world")
 
-""" 
-class BlogDetailView(ListView):
+ 
+class BlogDetailView(DetailView):
     model = Post
-    template_name = "BlogDetail.html" """
+    template_name = "BlogDetail.html" 
 
 class BlogListView(ListView):
     model = Post

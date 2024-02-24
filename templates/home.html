@@ -16,7 +16,9 @@
     <h1>This is the DetailView File</h1>
 
 
-    {% for Post postlist %}
+    {% for post in post_list %} {% comment %} nombre por defecto {% endcomment %}
+        {{post.title}}
+    {% endfor %}
 </body>
 </html>
 

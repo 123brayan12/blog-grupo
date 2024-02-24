@@ -1,9 +1,9 @@
-from .views import hello_world, ReadPageView, BlogList, BlogDetailView, BlogListView
+from .views import BlogListView, BlogListView
 from django.urls import path
+from .views import BlogCreateView
 
 urlpatterns = [
-    path("post/<int:pk>/", ReadPageView.as_view(), name='ReadPage'),
-    path("", ReadPageView.as_view(), name='ReadPage'),
-    
+    path("", BlogListView.as_view(), name='ReadPage'),
+    path("post/new",BlogCreateView.as_view(),name="post_new"),
 ]
 

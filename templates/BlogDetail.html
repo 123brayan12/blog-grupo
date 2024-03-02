@@ -13,26 +13,22 @@
 <body>
     
     <h2>Edit Page</h2>
-
-   <h4> {{ post.title }} </h4>
-
-<h3>content ==></h3>
-
-<p>
-    {{post.body}}
-</p>
-   <div class="Details_section">
-
-    <h4>Made by {{ post.author}}</h4>
-
-    <button class="Go_to_edit" value="Redirect">
-        Edit
-    </button>
+<div class = "container-fluid  d-flex justify-content-center">
+    <div class="card m-3" style = "width: 50vw;" >
+        <h5 class="card-header">{{ post.title }}</h5>
+        <div class="card-body">
+          <h5 class="card-title">Made by {{ post.author}}</h5>
+          <p class="card-text">{{post.body}}</p>
+          <a href="#" class="btn btn-primary">Edit</a>
+          <a href="#" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
 
     <a href="/"><button class="Exit">
         Go back
     </button></a>
-   </div>
+
 
 </body>
 

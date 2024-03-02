@@ -10,20 +10,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style_main.css' %}">
     <title>Read</title>
+    <style> 
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        
+    body{
+    background-color:#a8a8a8;
+    width: 100vw;
+    }
+
+.posts_container{
+    display: flex;
+    border: solid black 3px;
+    padding: 1em;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
+    width: 50%;
+
+}
+
+    .Post_views{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Post_views > a{
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        padding: 1em;
+
+        background-color: rgba(250, 235, 215, 0.534);
+
+        border-radius: 1.4em;
+
+    }
+
+    </style>
 </head>
 <body>
+<div class="container" >
 
     <h1>This is the DetailView File</h1>
-
+    
+    <div class="posts_container">
 
     {% for post in post_list %} {% comment %} nombre por defecto {% endcomment %}
+    <div class="Post_views">    
         <a href="{%  url 'post_detail' post.pk  %}">{{post.title}}</a>
-        <br>
+    </div>
     {% endfor %}
+    
+</div>
+    
+<br>
 
-    <br>
-    <a href="{% url 'post_new' %}">Create New</a>
+<a href="{% url 'post_new' %}">Create New</a>
 
+</div>
 </body>
 
 </html>

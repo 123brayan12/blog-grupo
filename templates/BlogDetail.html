@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_main.css' %}">
+    <title>Read</title>
+</head>
+<body>
+    
+    <h2>Edit Page</h2>
+
+   <h4> {{ post.title }} </h4>
+
+   <textarea name="to_edit" cols="30" rows="10" placeholder="Fill this area"></textarea>
+
+   <div class="send_section">
+
+    <button class="Sending">
+        Send
+    </button>
+
+    <a href="{% url 'MainSite' %}"><button class="Exit">
+        Go back
+        
+    </button></a>
+   </div>
+
+</body>
+
+</html>
+
+{% endblock content %}

@@ -20,7 +20,7 @@
           <h5 class="card-title">Made by {{ post.author}}</h5>
           <p class="card-text">{{post.body}}</p>
           <a href="#" class="btn btn-primary">Edit</a>
-          <a href="#" class="btn btn-danger">Delete</a>
+          <a href="{% url 'post_delete' post.pk %}" class="btn btn-danger">Delete</a>
         </div>
       </div>
     </div>

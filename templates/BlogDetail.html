@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_main.css' %}">
+    <title>Read</title>
+</head>
+<body>
+    
+    <h2>Edit Page</h2>
+<div class = "container-fluid  d-flex justify-content-center">
+    <div class="card m-3" style = "width: 50vw;" >
+        <h5 class="card-header">{{ post.title }}</h5>
+        <div class="card-body">
+          <h5 class="card-title">Made by {{ post.author}}</h5>
+          <p class="card-text">{{post.body}}</p>
+          <a href="#" class="btn btn-primary">Edit</a>
+          <a href="#" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="/"><button class="Exit">
+        Go back
+    </button></a>
+
+
+</body>
+
+</html>
+
+{% endblock content %}

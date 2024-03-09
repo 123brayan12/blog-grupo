@@ -1,16 +1,8 @@
-from django.views.generic.edit import CreateView, UpdateView 
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView 
 from django.urls import reverse_lazy 
-
-
-from django.views.generic.edit import CreateView
+from django.views.generic import TemplateView, ListView, DetailView 
 from .models import Post
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.views.generic import TemplateView, ListView, DetailView
-from django.urls import reverse_lazy
-
 
 class BlogUpdateView(UpdateView): 
     model = Post

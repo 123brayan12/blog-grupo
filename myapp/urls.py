@@ -1,4 +1,4 @@
-from .views import BlogDetailView, BlogListView
+from .views import BlogDetailView, BlogListView, BlogCreateView
 from django.urls import path
 from .views import BlogUpdateView
 from .views import BlogDeleteView
